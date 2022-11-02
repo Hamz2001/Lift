@@ -9,8 +9,8 @@ ft_putnbr.c	\
 ft_putstr.c	\
 ft_strlen.c	\
 ft_putnbr_unsigned.c	\
-# ft_putnbr_base.c	\
-# ft_putnbr_base.c	\
+ft_putnbr_base.c	\
+ft_hexadecimal.c	\
 
 CON= $(FUN:.c=.o)
 

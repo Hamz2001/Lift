@@ -28,6 +28,10 @@ int    handling2(const char *str, va_list arg, int j)
 				j += ft_putnbr(va_arg(arg, int));
             if (str[i] == 'u')
                 j += ft_putnbr_unsigned(va_arg(arg, unsigned int));
+            else if (str[i] == 'X' || str[i] == 'x')
+                j += ft_hexadecimal(va_arg(arg, unsigned int), str[i]);
+            else if (str[i] == '%')
+                j += ft_putchar(va_arg('%', char));
             i++;
         }
          if (str[i] != '\0')

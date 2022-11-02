@@ -22,9 +22,10 @@ int    handling2(const char *str, va_list arg, int j);
 int ft_putchar(char c);
 int ft_putnbr(int n);
 int ft_putstr(char *s);
-// int ft_putnbr_base(int n);
+int ft_putnbr_base(int n);
 size_t	ft_strlen(int n);
 int	ft_putnbr_unsigned(unsigned int n);
+int	ft_hexadecimal(unsigned int nb, char c);
 
 #endif
 
