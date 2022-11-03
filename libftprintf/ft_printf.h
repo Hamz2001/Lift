@@ -19,7 +19,7 @@
 #include <limits.h>
 
 int ft_printf(const char *, ...);
-int    ft_handling(const char *str, va_list arg, int j);
+int    ft_handling(const char *str, va_list arg, int j, int i);
 int ft_putchar(char c);
 int ft_putnbr(int n);
 int ft_putstr(char *s);
