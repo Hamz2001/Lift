@@ -12,25 +12,25 @@
 
 #include "ft_printf.h"
 
-int ft_putchar(char c)
+int	ft_putchar(int c)
 {
 	write(1, &c, 1);
-    return(1);
+	return (1);
 }
 
-int ft_putstr(char *s)
+int	ft_putstr(char *s)
 {
 	int	i;
 
 	i = 0;
-	if(s == NULL)
-		return(ft_putstr("(null)"));
+	if (s == NULL)
+		return (ft_putstr("(null)"));
 	while (s[i] != '\0')
 	{
 		write(1, &s[i], 1);
 		i++;
 	}
-	return(i);
+	return (i);
 }
 
 int	ft_putnbr(int n)
@@ -53,12 +53,13 @@ int	ft_putnbr(int n)
 		ft_putnbr(n / 10);
 		ft_putnbr(n % 10);
 	}
-	return(ft_strlen(n));
+	return (ft_strlen(n));
 }
 
 int	ft_putnbr_unsigned(unsigned int n)
 {
-	int i;
+	int	i;
+
 	i = 0;
 	if (n >= 0 && n < 10)
 	{
@@ -69,5 +70,5 @@ int	ft_putnbr_unsigned(unsigned int n)
 		ft_putnbr(n / 10);
 		ft_putnbr(n % 10);
 	}
-	return(ft_strlen_unsigned(n));
+	return (ft_strlen_unsigned(n));
 }
