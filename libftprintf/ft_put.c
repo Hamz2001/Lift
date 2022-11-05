@@ -67,8 +67,8 @@ int	ft_putnbr_unsigned(unsigned int n)
 	}
 	else
 	{
-		ft_putnbr(n / 10);
-		ft_putnbr(n % 10);
+		ft_putnbr_unsigned(n / 10);
+		ft_putnbr_unsigned(n % 10);
 	}
 	return (ft_strlen_unsigned(n));
 }

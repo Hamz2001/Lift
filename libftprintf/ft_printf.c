@@ -29,9 +29,9 @@ static int	ft_handling(const char *str, va_list arg, int j, int i)
 			else if (str[i] == 'p' && str[i++])
 				j += ft_putstr ("0x") + ft_address (va_arg(arg, size_t));
 			else if (str[i] == 'x' && str[i++])
-				j += ft_hexadicimal (va_arg (arg, unsigned int), str[i - 1]);
+				j += ft_hexadicimal (va_arg(arg, unsigned int), str[i - 1]);
 			else if (str[i] == 'X' && str[i++])
-				j += ft_hexadicimal (va_arg (arg, unsigned int), str[i - 1]);
+				j += ft_hexadicimal (va_arg(arg, unsigned int), str[i - 1]);
 			else if (str[i] == '%' && str[i++])
 				j += ft_putchar ('%');
 		}
@@ -54,8 +54,3 @@ int	ft_printf(const char *str, ...)
 	va_end (arg);
 	return (j);
 }
-// int main()
-// {
-// 	printf("%d\n",ft_printf("%x\n",161900));
-// 	printf("%d\n",printf("%x\n",161900));
-// }
